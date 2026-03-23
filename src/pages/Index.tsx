@@ -83,7 +83,7 @@ export default function Index() {
         <div className="logo">НАБЕРЕЖНАЯ ДОБРА</div>
         <nav>
           <a href="#menu" onClick={e => { e.preventDefault(); scrollTo("menu"); }}>Меню</a>
-          <a href="#about" onClick={e => { e.preventDefault(); scrollTo("about"); }}>О нас</a>
+          <a href="#about" onClick={e => { e.preventDefault(); scrollTo("about"); }}>О&nbsp;нас</a>
           <a href="#footer" onClick={e => { e.preventDefault(); scrollTo("footer"); }}>Контакты</a>
         </nav>
         <button className="btn-cta" onClick={() => scrollTo("footer")}>Как нас найти</button>
@@ -348,7 +348,11 @@ export default function Index() {
           <h4>Контакты</h4>
           <ul>
             <li><a href="tel:+79940183543" style={{ color: "inherit", textDecoration: "none" }}>+7 994 018-35-43</a></li>
-            <li>ул. Пушкинская, 34</li>
+            <li>
+              <a href="https://yandex.ru/maps/?text=Владивосток+Пушкинская+34" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)", textDecoration: "none" }}>
+                ул. Пушкинская, 34 →
+              </a>
+            </li>
             <li>Владивосток</li>
           </ul>
         </div>
