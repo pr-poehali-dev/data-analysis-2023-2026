@@ -105,7 +105,7 @@ export default function Index() {
                 Смотреть меню
               </button>
               <button className="btn-cta" style={{ background: "white" }} onClick={() => scrollTo("about")}>
-                Наша миссия
+                О нас
               </button>
             </div>
           </div>
