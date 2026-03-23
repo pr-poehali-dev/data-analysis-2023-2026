@@ -96,7 +96,7 @@ export default function Index() {
               <br />
               <span>ДОБРА</span> —
               <br />
-              там, где сердцу тепло
+              <span style={{ fontFamily: "Playfair Display, serif", fontStyle: "italic", color: "var(--dark)", fontSize: "0.75em", textTransform: "none" }}>там, где сердцу тепло</span>
             </h1>
             <p className="text-base md:text-lg lg:text-xl mb-8 md:mb-10 leading-relaxed text-[#555]">
               Домашняя кухня и своя пекарня во Владивостоке. Каждый обед здесь — это чей-то первый рабочий опыт. Средний чек 850 ₽.
