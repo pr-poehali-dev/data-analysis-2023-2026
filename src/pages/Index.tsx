@@ -362,10 +362,8 @@ export default function Index() {
         <div className="footer-links">
           <h4>Навигация</h4>
           <ul>
-            <li><a href="#" style={{ color: "inherit", textDecoration: "none" }}>Меню</a></li>
-            <li><a href="#" style={{ color: "inherit", textDecoration: "none" }}>О нас</a></li>
-            <li><a href="#" style={{ color: "inherit", textDecoration: "none" }}>Миссия</a></li>
-            <li><a href="#" style={{ color: "inherit", textDecoration: "none" }}>Контакты</a></li>
+            <li><a href="#menu" onClick={e => { e.preventDefault(); scrollTo("menu"); }} style={{ color: "inherit", textDecoration: "none" }}>Меню</a></li>
+            <li><a href="#about" onClick={e => { e.preventDefault(); scrollTo("about"); }} style={{ color: "inherit", textDecoration: "none" }}>О нас</a></li>
           </ul>
         </div>
         <div className="footer-links">
@@ -379,7 +377,6 @@ export default function Index() {
         <div className="footer-bottom">
           <span>2024 НАБЕРЕЖНАЯ ДОБРА</span>
           <span>ВЛАДИВОСТОК</span>
-          <span>VK / TG / IG</span>
         </div>
       </footer>
     </>
