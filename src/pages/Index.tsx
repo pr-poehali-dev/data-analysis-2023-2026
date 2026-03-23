@@ -92,9 +92,11 @@ export default function Index() {
         <section className="hero">
           <div className="hero-content">
             <h1 className="hero-title">
-              ЕШЬ
+              НАБЕРЕЖНАЯ
               <br />
-              С <span>ДУШОЙ</span>
+              <span>ДОБРА</span> —
+              <br />
+              там, где сердцу тепло
             </h1>
             <p className="text-base md:text-lg lg:text-xl mb-8 md:mb-10 leading-relaxed text-[#555]">
               Домашняя кухня и своя пекарня во Владивостоке. Каждый обед здесь — это чей-то первый рабочий опыт. Средний чек 850 ₽.
