@@ -253,6 +253,148 @@ export default function Index() {
           <div className="vibe-img"></div>
         </section>
 
+        {/* МИССИЯ */}
+        <section id="mission" className="section-padding">
+          <div className="section-header">
+            <h2 className="section-title">НАША МИССИЯ</h2>
+          </div>
+
+          {/* Вводный текст */}
+          <p style={{ fontSize: "18px", lineHeight: 1.7, maxWidth: "700px", marginBottom: "60px", color: "#444" }}>
+            «Набережная добра» — это кафе, где каждый обед помогает кому-то сделать первый шаг в профессию. Мы не просто кормим — мы учим, поддерживаем и даём шанс тем, кому отказывают везде.
+          </p>
+
+          {/* Кому мы помогаем */}
+          <h3 style={{
+            fontFamily: "Unbounded, sans-serif",
+            fontWeight: 800,
+            fontSize: "22px",
+            textTransform: "uppercase",
+            marginBottom: "32px",
+            letterSpacing: "-0.5px",
+          }}>Кому мы помогаем</h3>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px", marginBottom: "64px" }}>
+            {/* Карточка 1 */}
+            <div style={{ border: "var(--border)", boxShadow: "var(--shadow)", padding: "32px", background: "white" }}>
+              <div style={{
+                width: "56px", height: "56px",
+                background: "var(--primary)",
+                border: "var(--border)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: "26px",
+                marginBottom: "20px",
+                flexShrink: 0,
+              }}>🏠</div>
+              <h4 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "16px", textTransform: "uppercase", marginBottom: "12px" }}>
+                Выпускники детских домов
+              </h4>
+              <p style={{ fontSize: "14px", color: "#555", lineHeight: 1.7 }}>
+                После 18 лет им некуда вернуться. Без опыта работы — нигде не берут. Мы даём первый шанс.
+              </p>
+            </div>
+
+            {/* Карточка 2 */}
+            <div style={{ border: "var(--border)", boxShadow: "var(--shadow)", padding: "32px", background: "white" }}>
+              <div style={{
+                width: "56px", height: "56px",
+                background: "var(--secondary)",
+                border: "var(--border)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: "26px",
+                marginBottom: "20px",
+                flexShrink: 0,
+              }}>🤝</div>
+              <h4 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "16px", textTransform: "uppercase", marginBottom: "12px" }}>
+                Люди с инвалидностью (ОВЗ)
+              </h4>
+              <p style={{ fontSize: "14px", color: "#555", lineHeight: 1.7 }}>
+                Работодатели отказывают из-за стереотипов. Мы адаптируем задачи под человека — не человека под задачи.
+              </p>
+            </div>
+
+            {/* Карточка 3 */}
+            <div style={{ border: "var(--border)", boxShadow: "var(--shadow)", padding: "32px", background: "white" }}>
+              <div style={{
+                width: "56px", height: "56px",
+                background: "var(--accent)",
+                border: "var(--border)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: "26px",
+                marginBottom: "20px",
+                flexShrink: 0,
+              }}>🌱</div>
+              <h4 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "16px", textTransform: "uppercase", marginBottom: "12px" }}>
+                Подростки 14–18 лет
+              </h4>
+              <p style={{ fontSize: "14px", color: "#555", lineHeight: 1.7 }}>
+                Хотят работать, но везде требуют опыт. У нас — гибкий график до 4 часов в день и первая запись в трудовой.
+              </p>
+            </div>
+          </div>
+
+          {/* Как это работает */}
+          <h3 style={{
+            fontFamily: "Unbounded, sans-serif",
+            fontWeight: 800,
+            fontSize: "22px",
+            textTransform: "uppercase",
+            marginBottom: "32px",
+            letterSpacing: "-0.5px",
+          }}>Как это работает</h3>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
+            {[
+              { num: "01", title: "Отбор", text: "Кандидаты приходят через Центр занятости, детские дома, школы или по рекомендациям. Никаких требований к опыту — только желание учиться." },
+              { num: "02", title: "Обучение с наставником", text: "Каждый стажёр закреплён за опытным пекарем, поваром или администратором. Наставник объясняет, показывает и помогает, пока навык не станет уверенным." },
+              { num: "03", title: "Стажировка", text: "Гибкий график: подростки работают до 4 часов в день, для людей с ОВЗ — адаптированные задачи. Без спешки и давления." },
+              { num: "04", title: "Результат", text: "Запись в трудовой книжке, первый опыт и уверенность: «я могу». Это открывает двери туда, где раньше отказывали." },
+            ].map((step, i) => (
+              <div key={i} style={{
+                display: "grid",
+                gridTemplateColumns: "80px 1fr",
+                borderTop: "var(--border)",
+                padding: "28px 0",
+                gap: "24px",
+                alignItems: "start",
+              }}>
+                <span style={{
+                  fontFamily: "Unbounded, sans-serif",
+                  fontWeight: 800,
+                  fontSize: "36px",
+                  color: "var(--primary)",
+                  lineHeight: 1,
+                }}>{step.num}</span>
+                <div>
+                  <h4 style={{ fontWeight: 800, fontSize: "17px", textTransform: "uppercase", marginBottom: "8px" }}>{step.title}</h4>
+                  <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.7 }}>{step.text}</p>
+                </div>
+              </div>
+            ))}
+            <div style={{ borderTop: "var(--border)" }} />
+          </div>
+
+          {/* Итоговый призыв */}
+          <div style={{
+            marginTop: "56px",
+            background: "var(--dark)",
+            color: "white",
+            padding: "40px",
+            border: "var(--border)",
+            boxShadow: "var(--shadow)",
+            display: "flex",
+            flexDirection: "column" as const,
+            gap: "20px",
+          }}>
+            <p style={{ fontSize: "22px", fontFamily: "Unbounded, sans-serif", fontWeight: 800, lineHeight: 1.3, textTransform: "uppercase" }}>
+              Вы едите —<br /><span style={{ color: "var(--accent)" }}>они растут.</span>
+            </p>
+            <p style={{ fontSize: "15px", color: "#aaa", lineHeight: 1.7, maxWidth: "560px" }}>
+              Каждый ваш визит в кафе — это вклад в чью-то первую запись в трудовой. Без пожертвований, без фондов. Просто приходите обедать.
+            </p>
+          </div>
+        </section>
+
         <section className="section-padding">
           <h2 className="section-title" style={{ marginBottom: "40px", textAlign: "center" }}>
             МЫ В INSTAGRAM
