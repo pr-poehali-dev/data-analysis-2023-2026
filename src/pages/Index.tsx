@@ -85,7 +85,7 @@ export default function Index() {
           <a href="#menu" onClick={e => { e.preventDefault(); scrollTo("menu"); }}>Меню</a>
           <a href="#about" onClick={e => { e.preventDefault(); scrollTo("about"); }}>О&nbsp;нас</a>
           <a href="#footer" onClick={e => { e.preventDefault(); scrollTo("footer"); }}>Контакты</a>
-          <a href="#footer" onClick={e => { e.preventDefault(); scrollTo("footer"); }}>Как&nbsp;нас найти</a>
+          <a href="#footer" onClick={e => { e.preventDefault(); scrollTo("footer"); }} style={{ whiteSpace: "nowrap" }}>Как нас найти</a>
         </nav>
       </header>
 
