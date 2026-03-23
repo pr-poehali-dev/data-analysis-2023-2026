@@ -87,6 +87,7 @@ export default function Index() {
           <a href="#footer" onClick={e => { e.preventDefault(); scrollTo("footer"); }} style={{ whiteSpace: "nowrap" }}>Как нас найти</a>
         </nav>
       </header>
+      <div className="header-spacer" />
 
       <main>
         <section className="hero">
@@ -176,20 +177,18 @@ export default function Index() {
           }}>
             {/* Заголовок таблицы */}
             <div style={{
-              display: "grid",
-              gridTemplateColumns: "1fr auto auto",
-              gap: "0",
+              display: "flex",
+              justifyContent: "space-between",
               background: "var(--dark)",
               color: "white",
-              padding: "12px 20px",
+              padding: "12px 16px",
               fontWeight: 800,
               fontSize: "12px",
               textTransform: "uppercase",
               letterSpacing: "1px",
             }}>
               <span>Блюдо</span>
-              <span style={{ textAlign: "right", paddingRight: "24px" }}>Вес / объём</span>
-              <span style={{ textAlign: "right", minWidth: "80px" }}>Цена</span>
+              <span>Цена</span>
             </div>
 
             {/* Строки */}
@@ -197,35 +196,28 @@ export default function Index() {
               <div
                 key={i}
                 style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr auto auto",
-                  gap: "0",
-                  padding: "16px 20px",
+                  padding: "14px 16px",
                   borderTop: i === 0 ? "none" : "2px solid #e8e0d4",
                   background: i % 2 === 0 ? "white" : "var(--bg)",
-                  alignItems: "center",
                   transition: "background 0.15s",
                 }}
                 onMouseEnter={e => (e.currentTarget.style.background = "#fff3e0")}
                 onMouseLeave={e => (e.currentTarget.style.background = i % 2 === 0 ? "white" : "var(--bg)")}
               >
-                <span style={{ fontWeight: 600, fontSize: "15px" }}>{item.name}</span>
-                <span style={{
-                  fontSize: "13px",
-                  color: "#888",
-                  paddingRight: "24px",
-                  textAlign: "right",
-                  whiteSpace: "nowrap",
-                }}>{item.weight}</span>
-                <span style={{
-                  fontFamily: "Unbounded, sans-serif",
-                  fontWeight: 800,
-                  fontSize: "15px",
-                  color: "var(--primary)",
-                  textAlign: "right",
-                  whiteSpace: "nowrap",
-                  minWidth: "80px",
-                }}>{item.price}</span>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "12px" }}>
+                  <span style={{ fontWeight: 600, fontSize: "15px", flex: 1 }}>{item.name}</span>
+                  <span style={{
+                    fontFamily: "Unbounded, sans-serif",
+                    fontWeight: 800,
+                    fontSize: "15px",
+                    color: "var(--primary)",
+                    whiteSpace: "nowrap",
+                    flexShrink: 0,
+                  }}>{item.price}</span>
+                </div>
+                {item.weight && (
+                  <div style={{ fontSize: "13px", color: "#888", marginTop: "4px" }}>{item.weight}</div>
+                )}
               </div>
             ))}
           </div>
