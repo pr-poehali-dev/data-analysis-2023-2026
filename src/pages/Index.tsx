@@ -80,7 +80,7 @@ export default function Index() {
       <div className="grain-overlay" />
 
       <header className="header">
-        <div className="logo">НАБЕРЕЖНАЯ*ДОБРА</div>
+        <div className="logo">НАБЕРЕЖНАЯ ДОБРА</div>
         <nav>
           <a href="#menu" onClick={e => { e.preventDefault(); scrollTo("menu"); }}>Меню</a>
           <a href="#about" onClick={e => { e.preventDefault(); scrollTo("about"); }}>О нас</a>
@@ -319,42 +319,12 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="section-padding">
-          <h2 className="section-title" style={{ marginBottom: "40px", textAlign: "center" }}>
-            МЫ В INSTAGRAM
-          </h2>
-          <div className="social-grid">
-            <div className="social-item">
-              <img
-                src="https://cdn.poehali.dev/projects/02f76ace-4da7-4dfe-9232-80d82d8f628a/files/55f6edf7-1590-4710-a5bf-0592d2e1627c.jpg"
-                alt="Атмосфера"
-              />
-            </div>
-            <div className="social-item">
-              <img
-                src="https://cdn.poehali.dev/projects/02f76ace-4da7-4dfe-9232-80d82d8f628a/files/fc0eac55-5a0a-4192-bacf-6dfe62e7617b.jpg"
-                alt="Обеды"
-              />
-            </div>
-            <div className="social-item">
-              <img
-                src="https://cdn.poehali.dev/projects/02f76ace-4da7-4dfe-9232-80d82d8f628a/files/db9230d9-a417-479d-bc20-e3a2372c6bba.jpg"
-                alt="Выпечка"
-              />
-            </div>
-            <div className="social-item">
-              <img
-                src="https://cdn.poehali.dev/projects/02f76ace-4da7-4dfe-9232-80d82d8f628a/files/29c2026f-41f2-47da-9f48-78b5c9f8763d.jpg"
-                alt="Кофе"
-              />
-            </div>
-          </div>
-        </section>
+
       </main>
 
       <footer id="footer">
         <div>
-          <div className="footer-logo">НАБЕРЕЖНАЯ*ДОБРА</div>
+          <div className="footer-logo">НАБЕРЕЖНАЯ ДОБРА</div>
           <p style={{ color: "#666", lineHeight: 1.6 }}>
             Социальное кафе с домашней кухней и своей пекарней. Владивосток. Где каждый обед — это чей-то первый шаг.
           </p>
