@@ -76,7 +76,7 @@ export default function Index() {
   const [activeCategory, setActiveCategory] = useState("Супы");
 
   return (
-    <>
+    <div className="page-wrapper">
       <div className="grain-overlay" />
 
       <header className="header">
@@ -87,7 +87,6 @@ export default function Index() {
           <a href="#footer" onClick={e => { e.preventDefault(); scrollTo("footer"); }} style={{ whiteSpace: "nowrap" }}>Как нас найти</a>
         </nav>
       </header>
-      <div className="header-spacer" />
 
       <main>
         <section className="hero">
@@ -341,6 +340,6 @@ export default function Index() {
           <span>ВЛАДИВОСТОК</span>
         </div>
       </footer>
-    </>
+    </div>
   );
 }

@@ -87,13 +87,16 @@
     background-color: var(--bg);
     color: var(--dark);
     overflow-x: hidden;
-    max-width: 1200px;
-    margin: 0 auto;
   }
 }
 
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) {
-  body {
+  .page-wrapper {
     border-left: var(--border);
     border-right: var(--border);
   }
@@ -108,27 +111,15 @@ header {
   padding: 0 20px;
   border-bottom: var(--border);
   background: white;
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 1000;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.header-spacer {
-  height: 80px;
 }
 
 @media (min-width: 768px) {
   header {
     height: 100px;
     padding: 0 50px;
-  }
-
-  .header-spacer {
-    height: 100px;
   }
 }
 
