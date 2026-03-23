@@ -83,8 +83,7 @@ export default function Index() {
         <div className="logo">НАБЕРЕЖНАЯ*ДОБРА</div>
         <nav>
           <a href="#menu" onClick={e => { e.preventDefault(); scrollTo("menu"); }}>Меню</a>
-          <a href="#mission" onClick={e => { e.preventDefault(); scrollTo("mission"); }}>О нас</a>
-          <a href="#mission" onClick={e => { e.preventDefault(); scrollTo("mission"); }}>Миссия</a>
+          <a href="#about" onClick={e => { e.preventDefault(); scrollTo("about"); }}>О нас</a>
           <a href="#footer" onClick={e => { e.preventDefault(); scrollTo("footer"); }}>Контакты</a>
         </nav>
         <button className="btn-cta" onClick={() => scrollTo("footer")}>Как нас найти</button>
@@ -105,7 +104,7 @@ export default function Index() {
               <button className="btn-cta" style={{ background: "var(--primary)", color: "white" }} onClick={() => scrollTo("menu")}>
                 Смотреть меню
               </button>
-              <button className="btn-cta" style={{ background: "white" }} onClick={() => scrollTo("mission")}>
+              <button className="btn-cta" style={{ background: "white" }} onClick={() => scrollTo("about")}>
                 Наша миссия
               </button>
             </div>
@@ -250,137 +249,58 @@ export default function Index() {
             <p className="vibe-text">
               Мы единственное кафе во Владивостоке, где ваш обед меняет жизни. Мы трудоустраиваем выпускников детских домов, людей с ОВЗ и подростков от 14 лет. Они приходят без опыта — уходят с записью в трудовой и профессией в руках. Пекаря, официанта, помощника на кухне. Вы едите — они растут.
             </p>
-            <button className="btn-cta" style={{ background: "var(--dark)", color: "white", borderColor: "white" }} onClick={() => scrollTo("mission")}>
+            <button className="btn-cta" style={{ background: "var(--dark)", color: "white", borderColor: "white" }} onClick={() => scrollTo("about")}>
               Узнать о миссии
             </button>
           </div>
           <div className="vibe-img"></div>
         </section>
 
-        {/* МИССИЯ */}
-        <section id="mission" className="section-padding">
+        {/* О НАС */}
+        <section id="about" className="section-padding">
           <div className="section-header">
-            <h2 className="section-title">НАША МИССИЯ</h2>
+            <h2 className="section-title">О НАС</h2>
           </div>
 
-          {/* Вводный текст */}
-          <p style={{ fontSize: "18px", lineHeight: 1.7, maxWidth: "700px", marginBottom: "60px", color: "#444" }}>
-            «Набережная добра» — это кафе, где каждый обед помогает кому-то сделать первый шаг в профессию. Мы не просто кормим — мы учим, поддерживаем и даём шанс тем, кому отказывают везде.
-          </p>
+          {/* Блоки с текстом */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "0", border: "var(--border)", boxShadow: "var(--shadow)", marginBottom: "48px" }}>
 
-          {/* Кому мы помогаем */}
-          <h3 style={{
-            fontFamily: "Unbounded, sans-serif",
-            fontWeight: 800,
-            fontSize: "22px",
-            textTransform: "uppercase",
-            marginBottom: "32px",
-            letterSpacing: "-0.5px",
-          }}>Кому мы помогаем</h3>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px", marginBottom: "64px" }}>
-            {/* Карточка 1 */}
-            <div style={{ border: "var(--border)", boxShadow: "var(--shadow)", padding: "32px", background: "white" }}>
-              <div style={{
-                width: "56px", height: "56px",
-                background: "var(--primary)",
-                border: "var(--border)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: "26px",
-                marginBottom: "20px",
-                flexShrink: 0,
-              }}>🏠</div>
-              <h4 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "16px", textTransform: "uppercase", marginBottom: "12px" }}>
-                Выпускники детских домов
-              </h4>
-              <p style={{ fontSize: "14px", color: "#555", lineHeight: 1.7 }}>
-                После 18 лет им некуда вернуться. Без опыта работы — нигде не берут. Мы даём первый шанс.
+            <div style={{ padding: "36px", borderRight: "var(--border)", borderBottom: "var(--border)" }}>
+              <div style={{ fontSize: "28px", marginBottom: "16px" }}>☕</div>
+              <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Кто мы</h3>
+              <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
+                «Набережная добра» — социальное кафе во Владивостоке с домашней кухней и собственной пекарней. Мы готовим обеды (супы, вторые, салаты), печём круассаны, пирожки, булочки с корицей, блины и варим качественный кофе.
               </p>
             </div>
 
-            {/* Карточка 2 */}
-            <div style={{ border: "var(--border)", boxShadow: "var(--shadow)", padding: "32px", background: "white" }}>
-              <div style={{
-                width: "56px", height: "56px",
-                background: "var(--secondary)",
-                border: "var(--border)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: "26px",
-                marginBottom: "20px",
-                flexShrink: 0,
-              }}>🤝</div>
-              <h4 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "16px", textTransform: "uppercase", marginBottom: "12px" }}>
-                Люди с инвалидностью (ОВЗ)
-              </h4>
-              <p style={{ fontSize: "14px", color: "#555", lineHeight: 1.7 }}>
-                Работодатели отказывают из-за стереотипов. Мы адаптируем задачи под человека — не человека под задачи.
+            <div style={{ padding: "36px", borderBottom: "var(--border)" }}>
+              <div style={{ fontSize: "28px", marginBottom: "16px" }}>❤️</div>
+              <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Наша миссия</h3>
+              <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
+                Дать первый рабочий опыт тем, кому сложно начать. Мы трудоустраиваем выпускников детских домов, людей с инвалидностью и подростков 14–18 лет. В Приморском крае сотни людей не могут найти работу из-за отсутствия опыта — мы ломаем этот замкнутый круг.
               </p>
             </div>
 
-            {/* Карточка 3 */}
-            <div style={{ border: "var(--border)", boxShadow: "var(--shadow)", padding: "32px", background: "white" }}>
-              <div style={{
-                width: "56px", height: "56px",
-                background: "var(--accent)",
-                border: "var(--border)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: "26px",
-                marginBottom: "20px",
-                flexShrink: 0,
-              }}>🌱</div>
-              <h4 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "16px", textTransform: "uppercase", marginBottom: "12px" }}>
-                Подростки 14–18 лет
-              </h4>
-              <p style={{ fontSize: "14px", color: "#555", lineHeight: 1.7 }}>
-                Хотят работать, но везде требуют опыт. У нас — гибкий график до 4 часов в день и первая запись в трудовой.
+            <div style={{ padding: "36px", borderRight: "var(--border)" }}>
+              <div style={{ fontSize: "28px", marginBottom: "16px" }}>🎓</div>
+              <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Как это работает</h3>
+              <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
+                Каждый стажёр закреплён за наставником — опытным пекарем, поваром или администратором. Обучение проходит в реальном процессе: выпечка, приготовление блюд, работа с кассой, обслуживание гостей. После — запись в трудовой книжке.
               </p>
             </div>
-          </div>
 
-          {/* Как это работает */}
-          <h3 style={{
-            fontFamily: "Unbounded, sans-serif",
-            fontWeight: 800,
-            fontSize: "22px",
-            textTransform: "uppercase",
-            marginBottom: "32px",
-            letterSpacing: "-0.5px",
-          }}>Как это работает</h3>
+            <div style={{ padding: "36px" }}>
+              <div style={{ fontSize: "28px", marginBottom: "16px" }}>⭐</div>
+              <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Почему выбирают нас</h3>
+              <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
+                Мы — единственное кафе во Владивостоке, которое совмещает домашнюю кухню, пекарню, кофе и системное трудоустройство трёх уязвимых групп. Приходя к нам, вы не просто обедаете — вы становитесь частью доброго дела.
+              </p>
+            </div>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
-            {[
-              { num: "01", title: "Отбор", text: "Кандидаты приходят через Центр занятости, детские дома, школы или по рекомендациям. Никаких требований к опыту — только желание учиться." },
-              { num: "02", title: "Обучение с наставником", text: "Каждый стажёр закреплён за опытным пекарем, поваром или администратором. Наставник объясняет, показывает и помогает, пока навык не станет уверенным." },
-              { num: "03", title: "Стажировка", text: "Гибкий график: подростки работают до 4 часов в день, для людей с ОВЗ — адаптированные задачи. Без спешки и давления." },
-              { num: "04", title: "Результат", text: "Запись в трудовой книжке, первый опыт и уверенность: «я могу». Это открывает двери туда, где раньше отказывали." },
-            ].map((step, i) => (
-              <div key={i} style={{
-                display: "grid",
-                gridTemplateColumns: "80px 1fr",
-                borderTop: "var(--border)",
-                padding: "28px 0",
-                gap: "24px",
-                alignItems: "start",
-              }}>
-                <span style={{
-                  fontFamily: "Unbounded, sans-serif",
-                  fontWeight: 800,
-                  fontSize: "36px",
-                  color: "var(--primary)",
-                  lineHeight: 1,
-                }}>{step.num}</span>
-                <div>
-                  <h4 style={{ fontWeight: 800, fontSize: "17px", textTransform: "uppercase", marginBottom: "8px" }}>{step.title}</h4>
-                  <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.7 }}>{step.text}</p>
-                </div>
-              </div>
-            ))}
-            <div style={{ borderTop: "var(--border)" }} />
           </div>
 
           {/* Итоговый призыв */}
           <div style={{
-            marginTop: "56px",
             background: "var(--dark)",
             color: "white",
             padding: "40px",
@@ -394,7 +314,7 @@ export default function Index() {
               Вы едите —<br /><span style={{ color: "var(--accent)" }}>они растут.</span>
             </p>
             <p style={{ fontSize: "15px", color: "#aaa", lineHeight: 1.7, maxWidth: "560px" }}>
-              Каждый ваш визит в кафе — это вклад в чью-то первую запись в трудовой. Без пожертвований, без фондов. Просто приходите обедать.
+              Каждый ваш визит — это вклад в чью-то первую запись в трудовой. Без пожертвований и фондов. Просто приходите обедать.
             </p>
           </div>
         </section>
