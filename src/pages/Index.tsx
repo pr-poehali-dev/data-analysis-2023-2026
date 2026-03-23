@@ -243,18 +243,7 @@ export default function Index() {
           )}
         </section>
 
-        <section className="retro-vibe">
-          <div>
-            <h2 className="vibe-title">ЕДА — ЭТО ТОЛЬКО НАЧАЛО.</h2>
-            <p className="vibe-text">
-              Мы единственное кафе во Владивостоке, где ваш обед меняет жизни. Мы трудоустраиваем выпускников детских домов, людей с ОВЗ и подростков от 14 лет. Они приходят без опыта — уходят с записью в трудовой и профессией в руках. Пекаря, официанта, помощника на кухне. Вы едите — они растут.
-            </p>
-            <button className="btn-cta" style={{ background: "var(--dark)", color: "white", borderColor: "white" }} onClick={() => scrollTo("about")}>
-              Узнать о миссии
-            </button>
-          </div>
-          <div className="vibe-img"></div>
-        </section>
+
 
         {/* О НАС */}
         <section id="about" className="section-padding">
