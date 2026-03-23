@@ -85,8 +85,8 @@ export default function Index() {
           <a href="#menu" onClick={e => { e.preventDefault(); scrollTo("menu"); }}>Меню</a>
           <a href="#about" onClick={e => { e.preventDefault(); scrollTo("about"); }}>О&nbsp;нас</a>
           <a href="#footer" onClick={e => { e.preventDefault(); scrollTo("footer"); }}>Контакты</a>
+          <a href="#footer" onClick={e => { e.preventDefault(); scrollTo("footer"); }}>Как&nbsp;нас найти</a>
         </nav>
-        <button className="btn-cta" onClick={() => scrollTo("footer")}>Как нас найти</button>
       </header>
 
       <main>
