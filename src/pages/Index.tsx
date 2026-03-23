@@ -344,6 +344,14 @@ export default function Index() {
             <li>Вс: Выходной</li>
           </ul>
         </div>
+        <div className="footer-links">
+          <h4>Контакты</h4>
+          <ul>
+            <li><a href="tel:+79940183543" style={{ color: "inherit", textDecoration: "none" }}>+7 994 018-35-43</a></li>
+            <li>ул. Пушкинская, 34</li>
+            <li>Владивосток</li>
+          </ul>
+        </div>
         <div className="footer-bottom">
           <span>2024 НАБЕРЕЖНАЯ ДОБРА</span>
           <span>ВЛАДИВОСТОК</span>
