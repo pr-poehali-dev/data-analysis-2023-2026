@@ -7,7 +7,7 @@ const menuData = {
     { name: "Суп рыбный с лососем и укропом", weight: "320 г", price: "290 ₽" },
     { name: "Суп-пюре из тыквы с семечками", weight: "300 г", price: "220 ₽" },
   ],
-  "Вторые": [
+  "Второе": [
     { name: "Картофельное пюре с котлетой по-домашнему", weight: "300 г", price: "350 ₽" },
     { name: "Гречка с печенью по-строгановски", weight: "280 г", price: "380 ₽" },
     { name: "Паста с курицей в сливочном соусе", weight: "320 г", price: "420 ₽" },
@@ -60,7 +60,7 @@ const menuData = {
 
 const categoryEmoji: Record<string, string> = {
   "Супы": "🍲",
-  "Вторые": "🍽️",
+  "Второе": "🍽️",
   "Салаты": "🥗",
   "Выпечка": "🥐",
   "Напитки": "☕",
@@ -259,7 +259,7 @@ export default function Index() {
               <div style={{ fontSize: "28px", marginBottom: "16px" }}>☕</div>
               <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Кто мы</h3>
               <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
-                «Набережная добра» — социальное кафе во Владивостоке с домашней кухней и собственной пекарней. Мы готовим обеды (супы, вторые, салаты), печём круассаны, пирожки, булочки с корицей, блины и варим качественный кофе.
+                «Набережная добра» — социальное кафе во Владивостоке с домашней кухней и собственной пекарней. Мы готовим обеды (супы, вторые блюда, салаты), печём круассаны, пирожки, булочки с корицей, блины и варим качественный кофе.
               </p>
             </div>
 
@@ -271,7 +271,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div style={{ padding: "36px", borderRight: "var(--border)" }}>
+            <div style={{ padding: "36px", borderRight: "var(--border)", borderBottom: "var(--border)" }}>
               <div style={{ fontSize: "28px", marginBottom: "16px" }}>🎓</div>
               <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Как это работает</h3>
               <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
@@ -279,7 +279,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div style={{ padding: "36px" }}>
+            <div style={{ padding: "36px", borderBottom: "var(--border)" }}>
               <div style={{ fontSize: "28px", marginBottom: "16px" }}>⭐</div>
               <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Почему выбирают нас</h3>
               <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
