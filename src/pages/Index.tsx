@@ -68,6 +68,10 @@ const categoryEmoji: Record<string, string> = {
   "Комбо": "⭐",
 };
 
+function scrollTo(id: string) {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+}
+
 export default function Index() {
   const [activeCategory, setActiveCategory] = useState("Супы");
 
@@ -78,12 +82,12 @@ export default function Index() {
       <header className="header">
         <div className="logo">НАБЕРЕЖНАЯ*ДОБРА</div>
         <nav>
-          <a href="#">Меню</a>
-          <a href="#">О нас</a>
-          <a href="#">Миссия</a>
-          <a href="#">Контакты</a>
+          <a href="#menu" onClick={e => { e.preventDefault(); scrollTo("menu"); }}>Меню</a>
+          <a href="#mission" onClick={e => { e.preventDefault(); scrollTo("mission"); }}>О нас</a>
+          <a href="#mission" onClick={e => { e.preventDefault(); scrollTo("mission"); }}>Миссия</a>
+          <a href="#footer" onClick={e => { e.preventDefault(); scrollTo("footer"); }}>Контакты</a>
         </nav>
-        <button className="btn-cta">Как нас найти</button>
+        <button className="btn-cta" onClick={() => scrollTo("footer")}>Как нас найти</button>
       </header>
 
       <main>
@@ -98,10 +102,10 @@ export default function Index() {
               Домашняя кухня и своя пекарня во Владивостоке. Каждый обед здесь — это чей-то первый рабочий опыт. Средний чек 850 ₽.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
-              <button className="btn-cta" style={{ background: "var(--primary)", color: "white" }}>
+              <button className="btn-cta" style={{ background: "var(--primary)", color: "white" }} onClick={() => scrollTo("menu")}>
                 Смотреть меню
               </button>
-              <button className="btn-cta" style={{ background: "white" }}>
+              <button className="btn-cta" style={{ background: "white" }} onClick={() => scrollTo("mission")}>
                 Наша миссия
               </button>
             </div>
@@ -246,7 +250,7 @@ export default function Index() {
             <p className="vibe-text">
               Мы единственное кафе во Владивостоке, где ваш обед меняет жизни. Мы трудоустраиваем выпускников детских домов, людей с ОВЗ и подростков от 14 лет. Они приходят без опыта — уходят с записью в трудовой и профессией в руках. Пекаря, официанта, помощника на кухне. Вы едите — они растут.
             </p>
-            <button className="btn-cta" style={{ background: "var(--dark)", color: "white", borderColor: "white" }}>
+            <button className="btn-cta" style={{ background: "var(--dark)", color: "white", borderColor: "white" }} onClick={() => scrollTo("mission")}>
               Узнать о миссии
             </button>
           </div>
@@ -428,7 +432,7 @@ export default function Index() {
         </section>
       </main>
 
-      <footer>
+      <footer id="footer">
         <div>
           <div className="footer-logo">НАБЕРЕЖНАЯ*ДОБРА</div>
           <p style={{ color: "#666", lineHeight: 1.6 }}>
