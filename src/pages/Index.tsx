@@ -243,10 +243,10 @@ export default function Index() {
             <h2 className="section-title">О НАС</h2>
           </div>
 
-          {/* Блоки с текстом */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "0", border: "var(--border)", boxShadow: "var(--shadow)", marginBottom: "48px" }}>
+          {/* Блоки с текстом — 2×2 */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0", border: "var(--border)", boxShadow: "var(--shadow)", marginBottom: "48px" }}>
 
-            <div style={{ padding: "36px", borderRight: "var(--border)", borderBottom: "var(--border)" }}>
+            <div style={{ padding: "36px", borderRight: "2px solid var(--dark)", borderBottom: "2px solid var(--dark)" }}>
               <div style={{ fontSize: "28px", marginBottom: "16px" }}>☕</div>
               <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Кто мы</h3>
               <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
@@ -254,7 +254,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div style={{ padding: "36px", borderBottom: "var(--border)" }}>
+            <div style={{ padding: "36px", borderBottom: "2px solid var(--dark)" }}>
               <div style={{ fontSize: "28px", marginBottom: "16px" }}>❤️</div>
               <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Наша миссия</h3>
               <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
@@ -262,7 +262,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div style={{ padding: "36px", borderRight: "var(--border)", borderBottom: "var(--border)" }}>
+            <div style={{ padding: "36px", borderRight: "2px solid var(--dark)" }}>
               <div style={{ fontSize: "28px", marginBottom: "16px" }}>🎓</div>
               <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Как это работает</h3>
               <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
@@ -270,7 +270,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div style={{ padding: "36px", borderBottom: "var(--border)" }}>
+            <div style={{ padding: "36px" }}>
               <div style={{ fontSize: "28px", marginBottom: "16px" }}>⭐</div>
               <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Почему выбирают нас</h3>
               <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
