@@ -244,36 +244,36 @@ export default function Index() {
           </div>
 
           {/* Блоки с текстом — 2×2 */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0", border: "var(--border)", boxShadow: "var(--shadow)", marginBottom: "48px" }}>
+          <div className="about-grid">
 
-            <div style={{ padding: "36px", borderRight: "2px solid var(--dark)", borderBottom: "2px solid var(--dark)" }}>
+            <div className="about-cell about-cell--border-right about-cell--border-bottom">
               <div style={{ fontSize: "28px", marginBottom: "16px" }}>☕</div>
-              <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Кто мы</h3>
-              <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
+              <h3 className="about-cell-title">Кто мы</h3>
+              <p className="about-cell-text">
                 «Набережная добра» — социальное кафе во Владивостоке с домашней кухней и собственной пекарней. Мы готовим обеды (супы, вторые блюда, салаты), печём круассаны, пирожки, булочки с корицей, блины и варим качественный кофе.
               </p>
             </div>
 
-            <div style={{ padding: "36px", borderBottom: "2px solid var(--dark)" }}>
+            <div className="about-cell about-cell--border-bottom">
               <div style={{ fontSize: "28px", marginBottom: "16px" }}>❤️</div>
-              <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Наша миссия</h3>
-              <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
+              <h3 className="about-cell-title">Наша миссия</h3>
+              <p className="about-cell-text">
                 Дать первый рабочий опыт тем, кому сложно начать. Мы трудоустраиваем выпускников детских домов, людей с инвалидностью и подростков 14–18 лет. В Приморском крае сотни людей не могут найти работу из-за отсутствия опыта — мы ломаем этот замкнутый круг.
               </p>
             </div>
 
-            <div style={{ padding: "36px", borderRight: "2px solid var(--dark)" }}>
+            <div className="about-cell about-cell--border-right">
               <div style={{ fontSize: "28px", marginBottom: "16px" }}>🎓</div>
-              <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Как это работает</h3>
-              <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
+              <h3 className="about-cell-title">Как это работает</h3>
+              <p className="about-cell-text">
                 Каждый стажёр закреплён за наставником — опытным пекарем, поваром или администратором. Обучение проходит в реальном процессе: выпечка, приготовление блюд, работа с кассой, обслуживание гостей. После — запись в трудовой книжке.
               </p>
             </div>
 
-            <div style={{ padding: "36px" }}>
+            <div className="about-cell">
               <div style={{ fontSize: "28px", marginBottom: "16px" }}>⭐</div>
-              <h3 style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", marginBottom: "14px", letterSpacing: "0.5px" }}>Почему выбирают нас</h3>
-              <p style={{ fontSize: "15px", color: "#555", lineHeight: 1.8 }}>
+              <h3 className="about-cell-title">Почему выбирают нас</h3>
+              <p className="about-cell-text">
                 Мы — единственное кафе во Владивостоке, которое совмещает домашнюю кухню, пекарню, кофе и системное трудоустройство трёх уязвимых групп. Приходя к нам, вы не просто обедаете — вы становитесь частью доброго дела.
               </p>
             </div>
