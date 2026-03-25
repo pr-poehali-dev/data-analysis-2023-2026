@@ -1,5 +1,7 @@
 import { useState } from "react";
 import TrainingPlan from "@/components/TrainingPlan";
+import Vacancies from "@/components/Vacancies";
+import ApplicationForm from "@/components/ApplicationForm";
 
 const menuData = {
   "Супы": [
@@ -85,6 +87,7 @@ export default function Index() {
         <nav>
           <a href="#menu" onClick={e => { e.preventDefault(); scrollTo("menu"); }}>Меню</a>
           <a href="#training" onClick={e => { e.preventDefault(); scrollTo("training"); }}>Стажёрам</a>
+          <a href="#vacancies" onClick={e => { e.preventDefault(); scrollTo("vacancies"); }}>Вакансии</a>
           <a href="#about" onClick={e => { e.preventDefault(); scrollTo("about"); }}>О&nbsp;нас</a>
           <a href="#footer" onClick={e => { e.preventDefault(); scrollTo("footer"); }} style={{ whiteSpace: "nowrap" }}>Как нас найти</a>
         </nav>
@@ -240,6 +243,8 @@ export default function Index() {
 
 
         <TrainingPlan />
+        <Vacancies />
+        <ApplicationForm />
 
         {/* О НАС */}
         <section id="about" className="section-padding">
