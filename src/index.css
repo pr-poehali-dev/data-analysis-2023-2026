@@ -126,15 +126,22 @@ header {
 .logo {
   font-family: "Unbounded", sans-serif;
   font-weight: 800;
-  font-size: 24px;
+  font-size: 16px;
   text-transform: uppercase;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+@media (min-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 768px) {
   .logo {
-    font-size: 32px;
-    letter-spacing: -2px;
+    font-size: 28px;
+    letter-spacing: -1px;
   }
 }
 
@@ -142,9 +149,12 @@ nav {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   nav {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-shrink: 0;
   }
 }
 
@@ -152,15 +162,83 @@ nav a {
   text-decoration: none;
   color: var(--dark);
   font-weight: 700;
-  margin-left: 30px;
+  margin-left: 20px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 11px;
   transition: 0.2s;
+  white-space: nowrap;
 }
 
 nav a:hover {
   color: var(--primary);
   text-decoration: underline;
+}
+
+/* Burger menu */
+.burger-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1100;
+}
+
+@media (min-width: 900px) {
+  .burger-btn {
+    display: none;
+  }
+}
+
+.burger-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--dark);
+  transition: 0.2s;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--dark);
+  font-family: "Unbounded", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mobile-menu a:hover {
+  color: var(--primary);
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: var(--dark);
+  line-height: 1;
 }
 
 /* Button CTA */
@@ -741,24 +819,23 @@ footer {
 
 /* Training Plan */
 .training-steps {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
   margin-bottom: 32px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 900px) {
   .training-steps {
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .training-step-btn {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 18px;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 14px;
   border: var(--border);
   background: white;
   color: var(--dark);
@@ -769,8 +846,8 @@ footer {
   text-align: left;
   transition: 0.15s;
   box-shadow: 2px 2px 0 var(--dark);
-  flex: 1;
-  min-width: 160px;
+  min-width: 0;
+  width: 100%;
 }
 
 .training-step-btn:hover {
@@ -787,7 +864,7 @@ footer {
 }
 
 .training-step-num {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 900;
   opacity: 0.4;
   line-height: 1;
@@ -799,14 +876,16 @@ footer {
 }
 
 .training-step-icon {
-  font-size: 18px;
+  font-size: 16px;
   flex-shrink: 0;
 }
 
 .training-step-title {
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.4;
   text-transform: uppercase;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .training-content {

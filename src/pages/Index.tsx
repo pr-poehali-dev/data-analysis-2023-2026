@@ -77,6 +77,12 @@ function scrollTo(id: string) {
 
 export default function Index() {
   const [activeCategory, setActiveCategory] = useState("Супы");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function navClick(id: string) {
+    setMenuOpen(false);
+    setTimeout(() => scrollTo(id), 10);
+  }
 
   return (
     <div className="page-wrapper">
@@ -89,9 +95,23 @@ export default function Index() {
           <a href="#training" onClick={e => { e.preventDefault(); scrollTo("training"); }}>Стажёрам</a>
           <a href="#vacancies" onClick={e => { e.preventDefault(); scrollTo("vacancies"); }}>Вакансии</a>
           <a href="#about" onClick={e => { e.preventDefault(); scrollTo("about"); }}>О&nbsp;нас</a>
-          <a href="#footer" onClick={e => { e.preventDefault(); scrollTo("footer"); }} style={{ whiteSpace: "nowrap" }}>Как нас найти</a>
+          <a href="#footer" onClick={e => { e.preventDefault(); scrollTo("footer"); }}>Контакты</a>
         </nav>
+        <button className="burger-btn" onClick={() => setMenuOpen(true)} aria-label="Меню">
+          <span /><span /><span />
+        </button>
       </header>
+
+      {menuOpen && (
+        <div className="mobile-menu">
+          <button className="mobile-menu-close" onClick={() => setMenuOpen(false)}>×</button>
+          <a href="#menu" onClick={e => { e.preventDefault(); navClick("menu"); }}>Меню</a>
+          <a href="#training" onClick={e => { e.preventDefault(); navClick("training"); }}>Стажёрам</a>
+          <a href="#vacancies" onClick={e => { e.preventDefault(); navClick("vacancies"); }}>Вакансии</a>
+          <a href="#about" onClick={e => { e.preventDefault(); navClick("about"); }}>О нас</a>
+          <a href="#footer" onClick={e => { e.preventDefault(); navClick("footer"); }}>Контакты</a>
+        </div>
+      )}
 
       <main>
         <section className="hero">
